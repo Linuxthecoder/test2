@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Reper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+    <canvas id="matrixCanvas"></canvas>
+    <h1 class="matrix-text">THE SCRIPT WRITER</h1>
+   <!-- Login Button or Username -->
+    <div class="user-info">
+        <button id="openLogin">Login</button>
+        <span id="loggedInUser" class="hidden"></span>
+    </div>
+</header>
+
+<!-- Auth Modal -->
+<div id="authModal" class="modal">
+    <div class="auth-container">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form">
+            <fieldset>
+                <legend>Login</legend>
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit" id="loginButton">Sign In</button>
+                <p id="error-message"></p>
+                <p class="switch-form">Don't have an account? <a href="#" id="showSignUp">Sign Up</a></p>
+            </fieldset>
+        </form>
+
+        <!-- Signup Form (Initially Hidden) -->
+        <form id="signupForm" class="auth-form hidden">
+            <fieldset>
+                <legend>Sign Up</legend>
+                <input type="text" id="signup-username" placeholder="Username" required> 
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="tel" id="signup-phone" placeholder="Phone Number" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+                <p class="switch-form">Already have an account? <a href="#" id="showLogin">Login</a></p>
+                <p id="signup-error-message" class="error-message"></p>
+            </fieldset>
+        </form>
+    </div>
+</div>
+</section>
+
+<div class="website-list-container">
+    <button id="toggleList">
+        Website Types <span id="toggleArrow">▼</span>
+    </button>
+    <div id="websiteList" class="hidden">
+        <ul>
+            <li><a href="#e-commerce">E-commerce</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#business">Business</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#Landing Page">Landing Page</a></li>
+            <li><a href="#social-network">Social Network</a></li>
+            <li><a href="#forum">Forum</a></li>
+            <li><a href="#entertainment">Entertainment</a></li>
+            <li><a href="#cyber-security">Cyber Security</a></li>
+        </ul>
+    </div>
+</div>
+
+ <!-- Agenda Section -->
+ <section id="agenda">
+    <h2>Agenda Of Our Website</h2>
+   <p> Our website is dedicated to helping individuals and businesses bring their digital visions to life. With a strong focus on user-friendly design, functionality, and modern web solutions, we aim to provide a seamless </p>
+    <p> website-building experience. With a very low cost. </p>
+ </section>
+
+ <section>
+    <h2>Goals & Objectives:</h2> 
+    <p>1️⃣ Empower Users – We help you create stunning websites with ease.</p>
+    <p>2️⃣ Provide Custom Solutions – From e-commerce to portfolios, we build it all.</p>
+    <p> 3️⃣ Enhance Online Presence – A well-structured website improves visibility.</p>
+    <p> 4️⃣ Simplify Web Development – We guide you through the process step by step.</p>
+    <p>5️⃣ Ensure Modern Design – Sleek, responsive, and up-to-date website layouts.</p>
+    <p> 6️⃣ Deliver Secure & Fast Websites – Speed and security are our priorities.</p>
+    <p>7️⃣ Offer Seamless User Experience – Intuitive navigation and smooth interactions.</p>
+    <p>8️⃣ Support Business Growth – Websites that help your brand thrive online.</p>
+    <p>9️⃣ Customize As Per Needs – Tailored solutions for different industries.</p>
+    <p>🔟 Provide Continuous Support – Assistance even after your website goes live.</p>
+    <p>We believe that everyone deserves a professional website without technical struggles. Whether you need an e-commerce store, portfolio, blog, or business site, or cyber security to protect you on internet make it possible with our expertise.</p> 
+  </section>
+
+    <!-- E-COMMERCE SECTION -->
+    <section id="e-commerce">
+        <h2>"Want to build an e-commerce website?"</h2>
+        <p>🚀 Why Build an E-Commerce Website?</p>  
+        <p>Expand your business to a <strong>global audience</strong>.</p>  
+        <p>Sell products <strong>24/7 without geographical limits</strong>.</p>  
+        <p>Automate sales, payments, and inventory management.</p>  
+        <p>Improve <strong>brand visibility</strong> and customer experience.</p>  
+    
+        <h3>🛠️ Key Features of an E-Commerce Website</h3>  
+        <p>✅ <strong>User-Friendly Design</strong> – Responsive, fast, and easy to navigate.</p>  
+        <p>✅ <strong>Product Catalog</strong> – Well-organized product listings with images & details.</p>  
+        <p>✅ <strong>Shopping Cart & Checkout</strong> – Seamless purchase experience.</p>  
+        <p>✅ <strong>Secure Payments</strong> – Integrate PayPal, Stripe, Razorpay, or UPI.</p>  
+        <p>✅ <strong>Order Management</strong> – Admin panel to track & process orders.</p>  
+        <p>✅ <strong>Customer Accounts</strong> – Users can track orders and save preferences.</p>  
+        <p>✅ <strong>SEO Optimization</strong> – Rank better on search engines to drive traffic.</p>  
+        <p>✅ <strong>Mobile Optimization</strong> – Ensure smooth shopping on mobile devices.</p>  
+        <p><a href="javascript:void(0);" class="open-request-form">📢 Ready to Start?</a></p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Looking to Build a Portfolio Website?</h2> 
+        <p>Looking to build a portfolio website to showcase your skills, projects, and achievements? A portfolio website is an essential tool for creatives, freelancers, and professionals to present their work to potential clients, employers, and collaborators.</p>
+        <p>A portfolio website is essential for many professionals and creative individuals, especially those in fields like web development, graphic design, photography, writing, and other creative industries. Here’s why a portfolio website is important:</p>
+
+        <p><strong>1. Showcase Your Work</strong><br>
+        Why? A portfolio website allows you to showcase your best work in one place. This is especially helpful for creatives like designers, developers, writers, and photographers, as it gives potential clients or employers a visual representation of your skills.<br>
+        Benefit: It provides evidence of your abilities, creativity, and professional achievements.</p>
+        
+        <p><strong>2. Build Your Personal Brand</strong><br>
+        Why? Your portfolio website acts as a personal branding tool. It’s an opportunity to present yourself in a way that aligns with your professional identity and sets you apart from others in your field.<br>
+        Benefit: A strong personal brand can help you establish trust and recognition, making it easier to attract clients or employers.</p>
+        
+        <p><strong>3. Increase Your Visibility</strong><br>
+        Why? A portfolio website provides an online presence, making it easier for potential clients or employers to find you.<br>
+        Benefit: By showcasing your work and providing easy contact information, it makes it more likely that someone will reach out to you for opportunities.</p>
+        
+        <p><strong>4. Demonstrate Your Skills</strong><br>
+        Why? A portfolio is more than just a list of your work; it demonstrates your skills in a practical way. You can display projects, explain your role in them, and even walk through the process of how you approached each task.<br>
+        Benefit: It gives employers and clients a deeper understanding of how you work and what you can deliver.</p>
+        
+        <p><strong>5. Professionalism</strong><br>
+        Why? A well-designed portfolio reflects professionalism and shows that you are serious about your craft. It makes you stand out in a competitive market.<br>
+        Benefit: A polished portfolio can help you make a great first impression and show that you are committed to delivering high-quality results.</p>
+        
+        <p><strong>6. Easy Access to Your Work</strong><br>
+        Why? A portfolio website centralizes your work, making it easy to share with anyone, anywhere, at any time. You can simply send a link instead of emailing multiple files.<br>
+        Benefit: It simplifies the process of sharing your work with potential employers or clients, which is efficient and convenient.</p>
+        
+        <p><strong>7. Continuous Growth and Updates</strong><br>
+        Why? Unlike printed portfolios, a digital portfolio is easy to update. As you complete new projects or develop new skills, you can quickly add them to your portfolio.<br>
+        Benefit: Your portfolio can evolve with your career, always staying up-to-date with your latest work and achievements.</p>
+        
+        <p><strong>8. Attract Potential Clients or Employers</strong><br>
+        Why? A portfolio can serve as a powerful tool for marketing your services or skills. It acts as an advertisement that sells your expertise and creative vision.<br>
+        Benefit: It helps you attract the right opportunities, whether you’re looking for freelance clients, a full-time job, or collaborations with other professionals.</p>
+        
+        <p><strong>9. Stand Out in the Job Market</strong><br>
+        Why? A strong portfolio can give you a competitive edge in the job market. It’s a concrete representation of your work, helping you stand out from other candidates.<br>
+        Benefit: It can give you a better chance at securing interviews and jobs, as it demonstrates your skills more effectively than a resume alone.</p>
+        
+        <p><strong>10. A Reflection of Your Growth</strong><br>
+        Why? Your portfolio is a representation of your progress. Over time, it will evolve to reflect your growing skills, experience, and style.<br>
+        Benefit: It acts as a visual timeline of your career, showing potential clients or employers how you’ve developed professionally.</p>
+        <p><a href="#" class="open-request-form">📢 Ready to Start?</a></p>
+      </section>
+   
+    <section id="blog">
+        <h2>Interested in Creating a Blog??</h2>
+        <p>📝 Why Start a Blog?</p>
+        <p>🔹 Share your knowledge, experiences, and opinions with the world.</p>
+        <p>🔹 Connect with like-minded individuals and build a community.</p>
+        <p>🔹 Establish yourself as an expert or thought leader in your field.</p>
+        <p>🔹 Improve your writing skills and creativity.</p>
+        <p>🔹 Generate income through ads, sponsored content, or affiliate marketing.</p>
+        <p>🔹 Learn new skills like SEO, social media marketing, and content creation.</p>
+        <p>🔹 Express yourself, tell your story, and leave a digital legacy.</p>
+        <p>🔹 Have fun, explore new topics, and engage with readers.</p>
+        <p>🔹 Stay informed, learn from others, and stay up-to-date on trends.</p>
+        <p>🔹 Inspire, motivate, and entertain your audience.</p>
+        <p><a href="#" class="open-request-form">📢 Ready to Start?</a></p>
+    </section>
+
+    <section id="business">
+        <h2>Business Website</h2>
+        <p>🏢 Why Build a Business Website?</p>
+        <p>🔹 Establish an online presence for your business.</p>
+        <p>🔹 Reach a wider audience and attract new customers.</p>
+        <p>🔹 Showcase your products, services, and expertise.</p>
+        <p>🔹 Provide essential information like contact details and opening hours.</p>
+        <p>🔹 Build credibility and trust with potential clients.</p>
+        <p>🔹 Improve customer service and support.</p>
+        <p>🔹 Stay competitive in your industry.</p>
+        <p>🔹 Increase brand visibility and recognition.</p>
+        <p>🔹 Drive traffic to your physical store or office.</p>
+        <p>🔹 Generate leads and sales online.</p>
+        <p><a href="#" class="open-request-form">📢 Ready to Start?</a></p>
+    </section>
+
+    <section id="education">
+        <h2> Create an Educational Website</h2>
+        <p>🎓 Why Create an Education Website?</p>
+        <p>🔹 Share knowledge and educational resources with students.</p>
+        <p>🔹 Provide online courses, tutorials, and study materials.</p>
+        <p>🔹 Reach a global audience of learners.</p>
+        <p>🔹 Offer certifications, degrees, or diplomas online.</p>
+        <p>🔹 Facilitate distance learning and remote education.</p>
+        <p>🔹 Engage students with interactive content and quizzes.</p>
+        <p>🔹 Connect teachers, students, and parents in a virtual classroom.</p>
+        <p>🔹 Enhance the learning experience with multimedia and technology.</p>
+        <p>🔹 Provide career guidance, counseling, and support services.</p>
+        <p>🔹 Stay up-to-date with the latest trends in education and e-learning.</p>
+        <p><a href="#" class="open-request-form">📢 Ready to Start?</a></p>
+    </section>
+
+    <section id="news">
+        <h2>Want to Start a News Website?</h2>
+        <p>📰 Why Start a News Website?</p>
+        <p>🔹 Share breaking news, updates, and current events.</p>
+        <p>🔹 Provide in-depth analysis, opinion pieces, and editorials.</p>
+        <p>🔹 Cover local, national, and international news stories.</p>
+        <p>🔹 Engage readers with multimedia content like videos and images.</p>
+        <p>🔹 Offer subscription options for premium content.</p>
+        <p>🔹 Build a loyal readership and community of followers.</p>
+        <p>🔹 Monetize your website through ads, sponsorships, and subscriptions.</p>
+        <p>🔹 Stay objective, accurate, and ethical in your reporting.</p>
+        <p>🔹 Provide a platform for diverse voices and perspectives.</p>
+        <p>🔹 Stay up-to-date with the latest news and trends in journalism.</p>
+        <p><a href="#" class="open-request-form">📢 Ready to Start?</a></p>
+    </section>
+
+    <section id="Landing Page">
+        <h2>Need a Landing Page?</h2>
+        <p>🚀 Why Create a Landing Page?</p>
+        <p>🔹 Promote a specific product, service, or offer.</p>
+        <p>🔹 Capture leads and build an email list.</p>
+        <p>🔹 Drive traffic to your main website or online store.</p>
+        <p>🔹 Encourage visitors to take a specific action (e.g., sign up, download).</p>
+        <p>🔹 Test new ideas, products, or marketing strategies.</p>
+        <p>🔹 Measure the effectiveness of your marketing campaigns.</p>
+        <p>🔹 Improve your search engine rankings and online visibility.</p>
+        <p>🔹 Provide a focused and distraction-free user experience.</p>
+        <p>🔹 Increase conversions and sales for your business.</p>
+        <p>🔹 Create a sense of urgency or exclusivity for your offer.</p>
+        <p><a href="#" class="open-request-form">📢 Ready to Start?</a></p>
+    </section>
+
+    <section id="social-network">
+        <h2>Building a Social Network?</h2>
+        <p>🌐 Why Create a Social Network?</p>
+        <p>🔹 Connect people with shared interests, hobbies, or goals.</p>
+        <p>🔹 Provide a platform for communication, collaboration, and networking.</p>
+        <p>🔹 Create a sense of community and belonging among users.</p>
+        <p>🔹 Share user-generated content like posts, photos, and videos.</p>
+        <p>🔹 Offer features like profiles, groups, events, and messaging.</p>
+        <p>🔹 Monetize your platform through ads, subscriptions, or premium features.</p>
+        <p>🔹 Provide a safe and secure environment for users to interact.</p>
+        <p>🔹 Foster relationships, friendships, and professional connections.</p>
+        <p>🔹 Stay up-to-date with the latest trends in social media and technology.</p>
+        <p>🔹 Empower users to express themselves, share their stories, and engage with others.</p>
+        <p><a href="#" class="open-request-form">📢 Ready to Start?</a></p>
+    </section>
+
+    <section id="forum">
+        <h2>Forum</h2>
+        <p>🔹 Create a platform for discussions, questions, and answers.</p>
+        <p>🔹 Build a community of users with shared interests or expertise.</p>
+        <p>🔹 Provide a space for users to seek advice, share knowledge, and connect.</p>
+        <p>🔹 Offer categories, topics, and threads for organized discussions.</p>
+        <p>🔹 Allow users to create profiles, post comments, and engage with others.</p>
+        <p>🔹 Moderate discussions to ensure a positive and respectful environment.</p>
+        <p>🔹 Monetize your forum through ads, sponsorships, or premium memberships.</p>
+        <p>🔹 Provide a platform for users to learn, grow, and collaborate with others.</p>
+        <p>🔹 Stay up-to-date with the latest trends in online communities and forums.</p>
+        <p>🔹 Empower users to share their expertise, ask questions, and connect with peers.</p>
+        <p><a href="#" class="open-request-form">📢 Ready to Start?</a></p>
+    </section>
+
+    <section id="entertainment">
+        <h2>Entertainment</h2>
+        <p>🔹 Create a platform for entertainment, leisure, and enjoyment.</p>
+        <p>🔹 Offer a variety of content like videos, music, games, and quizzes.</p>
+        <p>🔹 Provide a space for users to relax, unwind, and have fun.</p>
+        <p>🔹 Engage users with interactive features, challenges, and competitions.</p>
+        <p>🔹 Monetize your platform through ads, sponsorships, or premium content.</p>
+        <p>🔹 Offer personalized recommendations, playlists, and content suggestions.</p>
+        <p>🔹 Provide a safe and secure environment for users to enjoy entertainment.</p>
+        <p>🔹 Foster creativity, imagination, and exploration among users.</p>
+        <p>🔹 Stay up-to-date with the latest trends in entertainment and pop culture.</p>
+        <p>🔹 Empower users to discover new content, share their favorites, and connect with others.</p>
+        <p><a href="#" class="open-request-form">📢 Ready to Start?</a></p>
+    </section>
+
+    <section id="cyber-security">
+        <h2>Cyber Security</h2>
+        <p>🔹 Protect your website from cyber threats, attacks, and vulnerabilities.</p>
+        <p>🔹 Secure sensitive data, user information, and financial transactions.</p>
+        <p>🔹 Prevent unauthorized access, data breaches, and identity theft.</p>
+        <p>🔹 Ensure compliance with data protection laws and regulations.</p>
+        <p>🔹 Implement security measures like SSL certificates, firewalls, and encryption.</p>
+        <p>🔹 Monitor your website for suspicious activity, malware, and security risks.</p>
+        <p>🔹 Backup your data regularly to prevent data loss and downtime.</p>
+        <p>🔹 Educate your team, employees, and users about cybersecurity best practices.</p>
+        <p>🔹 Stay up-to-date with the latest threats, vulnerabilities, and security trends.</p>
+        <p>🔹 Work with cybersecurity experts, consultants, and professionals to protect your website.</p>
+        <p>🔹 Hire a team or a person for cyber security.</p>
+        <p>1. <strong>Confidentiality</strong></p>
+        <p><strong>Purpose:</strong> Ensures that only authorized users and systems can access specific data.</p>
+        <p><strong>How it Works:</strong> Data is encrypted, and access controls are set to restrict unauthorized access.</p>
+        <p><strong>Example:</strong> Using strong passwords, encryption, and multi-factor authentication (MFA) to protect sensitive data.</p>
+
+        <p>2. <strong>Integrity</strong></p>
+        <p><strong>Purpose:</strong> Ensures that data remains accurate and unaltered during storage, transmission, and processing.</p>
+        <p><strong>How it Works:</strong> Through hashing, checksums, and digital signatures, integrity mechanisms verify that data hasn't been tampered with.</p>
+        <p><strong>Example:</strong> Preventing data modification by unauthorized individuals through secure validation techniques.</p>
+
+        <p>3. <strong>Availability</strong></p>
+        <p><strong>Purpose:</strong> Ensures that systems and data are available and accessible when needed by authorized users.</p>
+        <p><strong>How it Works:</strong> Implementing backups, redundancy, and disaster recovery plans to maintain service continuity.</p>
+        <p><strong>Example:</strong> Keeping a website or critical service operational with minimal downtime even in case of an attack or system failure.</p>
+
+        <p>4. <strong>Authentication</strong></p>
+        <p><strong>Purpose:</strong> Verifies the identity of users, devices, or systems before granting access.</p>
+        <p><strong>How it Works:</strong> Typically uses usernames, passwords, biometrics, or tokens.</p>
+        <p><strong>Example:</strong> A login process that requires both a password and a fingerprint scan (multi-factor authentication).</p>
+
+        <p>5. <strong>Authorization</strong></p>
+        <p><strong>Purpose:</strong> Defines what resources and actions authenticated users can access or perform.</p>
+        <p><strong>How it Works:</strong> Access control mechanisms, such as role-based access control (RBAC) or discretionary access control (DAC), are used to grant specific permissions.</p>
+        <p><strong>Example:</strong> A user can only access their personal files and not others’ files within a shared network.</p>
+
+        <p>6. <strong>Non-repudiation</strong></p>
+        <p><strong>Purpose:</strong> Ensures that actions or transactions made by an individual cannot be denied or disputed.</p>
+        <p><strong>How it Works:</strong> Digital signatures, logging, and auditing mechanisms provide evidence that a particular action was performed by a specific individual.</p>
+        <p><strong>Example:</strong> Using a digital signature to confirm that a contract was signed by the intended party.</p>
+
+        <p>7. <strong>Firewalls</strong></p>
+        <p><strong>Purpose:</strong> Acts as a barrier between trusted internal networks and untrusted external networks (like the internet) to prevent unauthorized access.</p>
+        <p><strong>How it Works:</strong> Firewalls can filter traffic based on IP addresses, ports, and protocols.</p>
+        <p><strong>Example:</strong> A firewall that blocks any external traffic from a specific IP address to protect a corporate network.</p>
+
+        <p>8. <strong>Encryption</strong></p>
+        <p><strong>Purpose:</strong> Protects data in transit and at rest by converting it into an unreadable format for unauthorized users.</p>
+        <p><strong>How it Works:</strong> Data is encrypted using algorithms like AES or RSA and can only be decrypted with the correct key.</p>
+        <p><strong>Example:</strong> Using HTTPS (SSL/TLS) to secure communication between a user’s browser and a website.</p>
+
+        <p>9. <strong>Intrusion Detection and Prevention Systems (IDPS)</strong></p>
+        <p><strong>Purpose:</strong> Monitors network traffic for suspicious activity and prevents potential security breaches.</p>
+        <p><strong>How it Works:</strong> IDPS analyzes incoming and outgoing data to identify malicious patterns and responds by alerting administrators or blocking attacks.</p>
+        <p><strong>Example:</strong> Detecting unusual patterns of traffic that could indicate a Distributed Denial of Service (DDoS) attack.</p>
+
+        <p>10. <strong>Antivirus and Anti-malware Software</strong></p>
+        <p><strong>Purpose:</strong> Detects, prevents, and removes malicious software such as viruses, worms, spyware, and ransomware.</p>
+        <p><strong>How it Works:</strong> Regular scanning of systems and files for known malware signatures and suspicious behaviors.</p>
+        <p><strong>Example:</strong> Scanning downloaded files to prevent malware from infecting the system.</p>
+
+        <p>11. <strong>Security Patches and Updates</strong></p>
+        <p><strong>Purpose:</strong> Ensures that software and systems are up-to-date with the latest security improvements and fixes.</p>
+        <p><strong>How it Works:</strong> Vendors release patches and updates to address vulnerabilities in software.</p>
+        <p><strong>Example:</strong> Applying security patches to the operating system and applications to protect against newly discovered threats.</p>
+
+        <p>12. <strong>Backup and Recovery</strong></p>
+        <p><strong>Purpose:</strong> Ensures that data can be restored in the event of a cyber attack or system failure.</p>
+        <p><strong>How it Works:</strong> Regular backups of critical data are taken and stored securely, and recovery plans are in place to restore data when needed.</p>
+        <p><strong>Example:</strong> Regular cloud backups to ensure that data can be quickly restored after a ransomware attack.</p>
+
+        <p>13. <strong>Endpoint Security</strong></p>
+        <p><strong>Purpose:</strong> Protects individual devices (endpoints) like laptops, smartphones, and tablets from security breaches.</p>
+        <p><strong>How it Works:</strong> Endpoint security includes antivirus software, encryption, and access control to secure devices that connect to the network.</p>
+        <p><strong>Example:</strong> Enforcing encryption on all company laptops and ensuring that antivirus software is installed on every device.</p>
+
+        <p>14. <strong>Security Audits and Monitoring</strong></p>
+        <p><strong>Purpose:</strong> Continuously monitors systems for vulnerabilities and ensures compliance with security policies.</p>
+        <p><strong>How it Works:</strong> Regularly auditing and scanning systems for security gaps and maintaining logs of system activity.</p>
+        <p><strong>Example:</strong> A regular security audit to ensure compliance with industry standards like ISO 27001.</p>
+
+        <p>15. <strong>Incident Response and Management</strong></p>
+        <p><strong>Purpose:</strong> Prepares organizations to respond to cybersecurity incidents quickly and effectively.</p>
+        <p><strong>How it Works:</strong> Creating and maintaining an incident response plan that defines procedures for detecting, mitigating, and recovering from security breaches.</p>
+        <p><strong>Example:</strong> A company having a predefined response team ready to address a data breach.</p>
+
+        <p>16. <strong>Access Control</strong></p>
+        <p><strong>Purpose:</strong> Limits who can access what data and systems.</p>
+        <p><strong>How it Works:</strong> Use of policies and technology to enforce user access based on their roles and permissions.</p>
+        <p><strong>Example:</strong> Limiting access to sensitive financial information to senior managers only.</p>
+        <p><a href="#" class="open-request-form">📢 Ready to Start?</a></p>
+    </section>
+
+   <!-- Website Request Form Modal -->
+   <div id="requestFormModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <form id="requestForm" class="request-form">
+            <fieldset>
+            <legend>Website Rrequest form</legend> 
+            <input type="tel" id="requestPhone" placeholder="Enter your phone number" required>
+            <input type="password" id="requestPassword" placeholder="Confirm your password" required>
+            <input type="text" id="websiteType" placeholder="Enter website type" required>
+            <textarea id="requirements" placeholder="Describe your requirements..." required></textarea>
+            <button type="submit">Submit Request</button>
+            <p class="switch-form">Don't have an account? 
+            <a href="#" id="showSignUpFromRequest" class="auth-link">Sign Up </a>
+            </p>
+            <p id="requestStatus"></p>
+        </fieldset>
+        </form>
+    </div>
+</div>
+
+<!-- Logout Confirmation Modal -->
+<div id="logoutModal" class="modal hidden">
+    <div class="modal-content">
+        <p>Are you sure you want to log out?</p>
+        <button id="confirmLogout">Yes, Logout</button>
+        <button id="cancelLogout">Cancel</button>
+    </div>
+</div>
+
+<style>
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+</style>
+
+
+    <footer>
+        <p>&copy; 2024 THE SCRIPT WRITER. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</main>
+</body>
+</html>

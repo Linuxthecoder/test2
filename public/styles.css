@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Cambria', 'Times New Roman', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    color: white;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    background: black;
+    overflow: hidden;
+}
+
+#matrixCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.matrix-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: limegreen;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    z-index: 1;
+}
+
+/* User Info (Login Button or Username) */
+.user-info {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+}
+
+/* Transparent Login Button */
+.user-info button {
+    padding: 10px 20px;
+    border: 2px solid limegreen;
+    border-radius: 5px;
+    background: transparent;
+    color: limegreen;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 0 0 5px limegreen;
+}
+
+.user-info button:hover {
+    background: rgba(50, 205, 50, 0.3);
+}
+
+/* Logged-in Username */
+#loggedInUser {
+    font-size: 18px;
+    color: limegreen;
+    font-weight: bold;
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+.auth-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px limegreen;
+    text-align: center;
+}
+
+.auth-form {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+fieldset {
+    border: 2px solid limegreen;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+legend {
+    font-size: 20px;
+    color: limegreen;
+    font-weight: bold;
+    text-shadow: 0 0 5px limegreen;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 5px;
+    border: 1px solid limegreen;
+    border-radius: 5px;
+    background: black;
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: limegreen;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    background: darkgreen;
+}
+
+.switch-form {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.switch-form a {
+    color: limegreen;
+    text-decoration: none;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 25px;
+    background: #222327;
+    color: limegreen;
+    font-size: 14px;
+}
+
+.website-list-container {
+    text-align: center;
+    margin-top: 10px; /* Adjusts position after header */
+}
+
+#toggleList {
+    background: black;
+    color: limegreen;
+    border: 2px solid limegreen;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#toggleList:hover {
+    background: limegreen;
+    color: black;
+}
+
+#toggleArrow {
+    margin-left: 10px;
+}
+
+#websiteList {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid limegreen;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 200px;
+    text-align: left;
+    display: none; /* Hidden initially */
+}
+
+#websiteList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#websiteList li {
+    padding: 5px;
+    border-bottom: 1px solid limegreen;
+
+    cursor: pointer;
+}
+
+#websiteList li:last-child {
+    border-bottom: none;
+}
+
+#websiteList li:hover {
+    text-shadow: 0 0 10px limegreen;
+}
+
+section {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    margin: 2rem 0; /* Adds space above and below the section */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 15px solid limegreen; /* Keeps the left border */
+    position: relative;
+}
+
+/* If sections are inside a container with flexbox or grid */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Adds space between sections */
+}
+
+
+  #e-commerce-section {
+    background: slategray;
+    padding: 4rem;
+    margin: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(50, 205, 50, 0.8); /* Limegreen glow effect */
+    border-left: 15px solid limegreen; /* Left border */
+    position: relative;
+    color: white;
+}
+
+#ecommerce-section h2,  
+#ecommerce-section h3 {  
+    color: limegreen;  
+    text-shadow: 0 0 5px limegreen;
+}  
+
+#ecommerce-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+#ecommerce-section strong {
+    color: #FFD700; /* Gold color for highlighting important words */
+}
+
+#ecommerce-section a {
+    color: limegreen;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#ecommerce-section a:hover {
+    text-decoration: underline;
+}
+
+/* Center the request title and fix the form */
+.request {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.request h2 {
+    color: limegreen;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px limegreen;
+    margin-bottom: 20px;
+}
+
+/* Fix the form layout */
+.request form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px limegreen;
+}
+
+/* Input and button styling */
+.request form input,
+.request form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid limegreen;
+    background: black;
+    color: white;
+    font-size: 1rem;
+}
+
+.request form button {
+    background-color: limegreen;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+border-radius: 100%;
+}
+
+.request form button:hover {
+    background-color: darkgreen;
+    transform: scale(1.05);
+}
+
+/* Switch form styles */
+.switch-form {
+    font-size: 14px;
+    text-align: center;
+}
+
+.switch-form a {
+    color: limegreen;
+    text-decoration: none;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+/* Website Types Section */
+.website-types {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px limegreen;
+    color: white;
+    text-align: center;
+}
+
+.website-types h3 {
+    color: limegreen;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.website-types ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.website-types li {
+    padding: 10px;
+    border-bottom: 1px solid limegreen;
+    cursor: pointer;
+}
+
+.website-types li:last-child {
+    border-bottom: none;
+}
+
+.website-types li:hover {
+    text-shadow: 0 0 10px limegreen;
+}
+
+.request-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid limegreen;
+    border-radius: 10px;
+}
+
+#requestStatus {
+    color: limegreen;
+    margin: 10px 0;
+    min-height: 20px;
+}
+
+textarea {
+    width: 90%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: 1px solid limegreen;
+    border-radius: 5px;
+}
+
+/* Add these updates to your existing CSS */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+#requestStatus {
+    color: limegreen;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+#requirements {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin: 10px 0;
+    background: #111;
+    border: 1px solid limegreen;
+    color: white;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.message { padding: 10px; margin: 10px 0; border-radius: 4px; }
+.message.success { background: black; color: #155724; }
+.message.error { background: black; color: #721c24; }
+.hidden { display: none; }
+
+.logout-btn {
+    display: block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Modal Overlay - Ensures Full Dark Background */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black overlay */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* Modal Box - No White Background */
+.modal-content {
+    background: rgba(0, 0, 0, 0.95) !important; /* Ensure dark background */
+    padding: 1cqw;
+    border-radius: 10px;
+
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    transition: transform 0.3s ease-out, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(-20px);
+    border: none; /* Remove extra borders */
+}
+
+/* Removes Any White Background */
+.modal.active .modal-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fix for White Box Issue */
+.modal-content::before,
+.modal-content::after {
+    display: none !important;
+}
+
+/* Input Fields */
+#requestForm input,
+#requestForm textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    background: #111; /* Dark background for fields */
+    border: 1px solid limegreen;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Expandable Effect */
+#requestForm input:focus,
+#requestForm textarea:focus {
+    background: black;
+    box-shadow: 0 0 10px limegreen;
+    transform: scale(1.05);
+}
+
+/* Close Button */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: limegreen;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.close-modal:hover {
+    color: red;
+}
+
+/* Form Header */
+.modal-content h2 {
+    color: limegreen;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+#requestForm input,
+#requestForm textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.85);
+    border-bottom: 2px solid limegreen; /* Only bottom border */
+    color: limegreen;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#requestForm input:focus,
+#requestForm textarea:focus {
+    border-bottom-color: #00ff00;
+    box-shadow: 0 0 10px rgba(50, 205, 50, 0.7);
+}
+
+/* Submit Button */
+#requestForm button {
+    width: 100%;
+    padding: 12px;
+    background: limegreen;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#requestForm button:hover {
+    background: #00ff00;
+    box-shadow: 0 0 15px rgba(50, 205, 50, 0.7);
+    transform: scale(1.05);
+}
+
+/* Auth Link Styling */
+.auth-link {
+    color: limegreen !important;
+    text-decoration: none;
+    cursor: pointer;
+    transition: text-shadow 0.3s ease;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 10px rgba(50, 205, 50, 0.5);
+}
+
+/* Neon Glow Animation */
+@keyframes neonGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(50, 205, 50, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(50, 205, 50, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(50, 205, 50, 0.5);
+    }
+}
+
+.modal-content:hover {
+    animation: neonGlow 1.5s infinite alternate;
+}
